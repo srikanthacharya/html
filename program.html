@@ -13,6 +13,7 @@ background-color:black;
 color:white;
 background-color:black;
 }
+
 a {
 color:white;
 font-size:20px;
@@ -34,6 +35,7 @@ color:white;
   border-bottom: 1px solid #f1f1f1;
   color: white;
 }
+
 h1 {
 color:white;
 }
@@ -70,13 +72,21 @@ color:white;
   .menu, .main, .right {
     width: 100%;
 	color: white;
+	}
   }
+  form {
+  text-align:center;
+  color:black;
+  padding:30px;
 }
 </style>
 </head>
 <body style="font-family:Verdana;">
-<button type="button" onclick="document.getElementById('demo').innerHTML = Date()" class="button">black</button>
+<button type="button" onclick="document.getElementById('demo').innerHTML = Date()"  class="button">black</button>
 <p id="demo"></p>
+
+<button  type="button" style="color:white;background-color:black;float:right;"><a href="exp2.html">logout</a></button >
+
 
 
   <img src="/home/srikanth/Videos/images.jpg" alt="image" style="width:1420px;height:200px;">
@@ -103,8 +113,18 @@ color:white;
     <p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
     <h2>Price?</h2>
     <p>The Walk is free!</p>
+	<hr>
+	
+	<form action="">
+	<img src="/home/srikanth/Videos/feedback.jpg" alt="image" width="150px">
+<textarea name="message" rows="5" cols="20" ></textarea>
+<br>
+<button type="button" style="color:white;background-color:black;text-align:center;padding:5px;"><a href="feedback.html">submit</a></button >
+
+</form>
   </div>
 </div>
+
 
 <div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> 
  Copyright &copy;<script>document.write Date().getFullYear());</script> All rights reserved </div>
