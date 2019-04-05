@@ -13,7 +13,6 @@ background-color:black;
 color:white;
 background-color:black;
 }
-
 a {
 color:white;
 font-size:20px;
@@ -35,7 +34,6 @@ color:white;
   border-bottom: 1px solid #f1f1f1;
   color: white;
 }
-
 h1 {
 color:white;
 }
@@ -54,7 +52,6 @@ color:white;
   margin-top: 7px;
   color: white;
 }
-
 @media only screen and (max-width:800px) {
   /* For tablets: */
   .main {
@@ -98,6 +95,44 @@ color:white;
     <a href="http//www.The transport.com/"target="blank"><div class="menuitem"></div>The walk</a>
     <a href="http//www.The history.com/"target="blank"><div class="menuitem"></div>History</a>
     <a href="http//www.gallery.com/"target="blank"><div class="menuitem"></div>gallery</a>
+	<br>
+	<br>
+	<div style="text-align:center"> 
+  <button onclick="playPause()"style="color:white;background-color:black;">Play/Pause</button> 
+  <button onclick="makeBig()"style="color:white;background-color:black;">Big</button>
+  <button onclick="makeSmall()"style="color:white;background-color:black;">Small</button>
+  <button onclick="makeNormal()"style="color:white;background-color:black;">Normal</button>
+  <br><br>
+  <video id="video1" width="250">
+    <source src="/home/srikanth/Downloads/image.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML5 video.
+  </video>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 300; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 200; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 250; 
+} 
+</script> 
+
   </div>
 
   <div class="main">
