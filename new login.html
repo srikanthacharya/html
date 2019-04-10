@@ -4,7 +4,7 @@
 <style>
 
 body {font-family: Arial, Helvetica, sans-serif;
-background-image:url(/home/srikanth/Videos/download2.jpeg)
+background-image:url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg)
 }
 
 /* Full-width input fields */
@@ -66,6 +66,8 @@ span.psw {
  /* background-color: rgb(0,0,0);  Fallback color */
   /*background-color: rgba(0,0,0,0.4); Black w/ opacity */
   padding-top: 60px;
+
+
   
   
 }
@@ -151,8 +153,8 @@ li {
 li a {
   display: block;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
+  
+  padding: 18px;
   text-decoration: none;
 }
 
@@ -160,19 +162,71 @@ li a:hover:not(.active) {
   background-color: #111;
 }
 
-.active {
-  background-color: #4CAF50;
+
+.pulse {
+  background-image: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius:8px;
+  
+}
+
+  
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: none;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: grey}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .pulse {
+  background-color:none;
 }
 </style>
 </head>
 <body>
+<div class="dropdown">
+  <button class="pulse">login</button>
+  <div class="dropdown-content">
+  <a onclick="document.getElementById('id01').style.display='block'">login</a>
+  <a href="#">create new account</a>
+  
+  </div>
+</div>
 
 <ul>
-    <li><a onclick="document.getElementById('id01').style.display='block'" class="active"style="width:auto;">LoginContact</a></li>
-   <li style="float:right"><a href="#contact">Contact</a></li>
-   <li style="float:right"><a href="#news">News</a></li>
-     <li style="float:right"><a href="#contact">about</a></li>
-   <li style="float:right"><a href="#home">Home</a></li>
+   <li style="float:right"><font size="5"><i><a href="#contact">Contact</a></i><font></li>
+   <li style="float:right"><font size="5"><i><a href="#news">News</a></i><font></li>
+     <li style="float:right"><font size="5"><i><a href="#contact">about</a></i><font></li>
+   <li style="float:right"><font size="5"><i><a href="#home">Home</a></i></font></li>
+
   
 </ul>
 
