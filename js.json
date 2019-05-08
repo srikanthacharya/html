@@ -1,0 +1,43 @@
+//looping through arrays inside arrays
+<script>
+var myObj, i, j, x = "";
+myObj = {
+  "name":"John",
+  "age":30,
+  "cars": [
+    {"name":"Ford", "models":["Fiesta", "Focus", "Mustang"]},
+    {"name":"BMW", "models":["320", "X3", "X5"]},
+    {"name":"Fiat", "models":["500", "Panda"] }
+  ]
+}
+for (i in myObj.cars) {
+  x += "<h2>" + myObj.cars[i].name + "</h2>";
+  for (j in myObj.cars[i].models) {
+    x += myObj.cars[i].models[j] + "<br>";
+  }
+}
+document.getElementById("demo").innerHTML = x;
+</script>
+
+----------------------------------------------------------------------------------------------------------------------------------
+//table based on json 
+<script>
+var obj, dbParam, xmlhttp, myObj, x, txt = "";
+obj = { table: "customers", limit: 20 };
+dbParam = JSON.stringify(obj);
+xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    myObj = JSON.parse(this.responseText);
+    txt += "<table border='1'>"
+    for (x in myObj) {
+      txt += "<tr><td>" + myObj[x].name + "</td></tr>";
+    }
+    txt += "</table>"    
+    document.getElementById("demo").innerHTML = txt;
+  }
+};
+xmlhttp.open("POST", "json_demo_db_post.php", true);
+xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+xmlhttp.send("x=" + dbParam);
+</script>
